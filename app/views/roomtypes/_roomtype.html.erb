@@ -1,21 +1,9 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Code</th>
-      <th scope="col">Name</th>
-      <th scope="col">Max Guest</th>
-      <th scope="col">Minimum Advance</th>
-      <th scope="col">Cancel Advance</th>
-    </tr>
-  </thead>
-      <tr>
-        <td><%= roomtype.code %></td>
-        <td><%= roomtype.name %></td>
-        <td><%= roomtype.max_guest %></td>
-        <td><%= roomtype.minium_advance %></td>
-        <td><%= roomtype.cancel_charges %></td>
-        <td>
-         
-        </td>
-      </tr>
-</table>
+<div class="jumbotron">
+  <h1 class="display-4"><%= roomtype.name %></h1>
+  <p class="lead"><%= roomtype.code %> | <%= roomtype.name %> | <%= roomtype.max_guest %> | <%= roomtype.cancel_charges %> </p>
+  <div>
+  <p><%= link_to "Edit", edit_roomtype_path(@roomtype) , class:"btn btn-secondary"%> |
+  <%= link_to "Back", roomtypes_path , class:"btn btn-dark"%> | <%= button_to "Delete", @roomtype, method: :delete, class:"btn btn-outline-danger sm" %></p>
+</div>
+</div>
+
