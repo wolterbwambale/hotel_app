@@ -3,8 +3,8 @@
 <%= render @roomtype %>
 
 <div>
-  <%= link_to "Edit this roomtype", edit_roomtype_path(@roomtype) %> |
-  <%= link_to "Back to roomtypes", roomtypes_path %>
+  <%= link_to "Edit", edit_roomtype_path(@roomtype) , class:"btn btn-secondary"%> |
+  <%= link_to "Back", roomtypes_path , class:"btn btn-dark"%>
 
-  <%= button_to "Destroy this roomtype", @roomtype, method: :delete %>
+  <%= button_to "Delete", @roomtype, method: :delete, class:"btn btn-outline-danger sm" %>
 </div>

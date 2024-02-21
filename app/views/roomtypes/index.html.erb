@@ -1,10 +1,28 @@
 
 <h1>Roomtypes</h1>
 <div id="roomtypes">
-<% @roomtypes.each do |roomtype| %>
-    <%= render roomtype %>
-     <%= link_to "Show", roomtype %>
-    <%end%>
-</div>
 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Code</th>
+      <th scope="col">Name</th>
+      <th scope="col">Max Guest</th>
+      <th scope="col">Minimum Advance</th>
+      <th scope="col">Cancel Advance</th>
+    </tr>
+  </thead>
+  <% @roomtypes.each do |roomtype| %>
+      <tr>
+        <td><%= roomtype.code %></td>
+        <td><%= link_to roomtype.name, roomtype %></td>
+        <td><%= roomtype.max_guest %></td>
+        <td><%= roomtype.minium_advance %></td>
+        <td><%= roomtype.cancel_charges %></td>
+      </tr>
+  <% end %>
+</table>
+
+</div>
+<br>
 <%= link_to "New roomtype", new_roomtype_path %>
