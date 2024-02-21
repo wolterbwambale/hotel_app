@@ -1,0 +1,10 @@
+
+<h1>Roomtypes</h1>
+<div id="roomtypes">
+<% @roomtypes.each do |roomtype| %>
+    <%= render roomtype %>
+     <%= link_to "Show", roomtype %>
+    <%end%>
+</div>
+
+<%= link_to "New roomtype", new_roomtype_path %>

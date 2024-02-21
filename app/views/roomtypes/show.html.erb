@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @roomtype %>
+
+<div>
+  <%= link_to "Edit this roomtype", edit_roomtype_path(@roomtype) %> |
+  <%= link_to "Back to roomtypes", roomtypes_path %>
+
+  <%= button_to "Destroy this roomtype", @roomtype, method: :delete %>
+</div>
