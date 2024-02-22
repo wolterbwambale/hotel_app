@@ -15,11 +15,12 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag 'rails-ujs' %>
   </head>
   <body>
    <%= render 'layouts/header/header' %>
     <div class="container">
-    <%if notice%>
+    <%if notice.present? %>
      <%= render "layouts/alert/alert"%>
      <%end%>
       <%= yield %>

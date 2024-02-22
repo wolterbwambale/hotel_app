@@ -1,42 +1,45 @@
-<div id="<%= dom_id room_master %>">
-  <p>
+<div class="card  h-100 justify-content-center align-items-center" style="width: 28rem;" >
+<div class="card-body">
+  <ul class="list-group list-group-flush">
+  <li class="list-group-item">
     <strong>Room No:</strong>
     <%= room_master.room_no %>
-  </p>
+  </li>
 
-  <p>
-    <strong>Room type:</strong>
-    <%= room_master.room_type %>
-  </p>
-
-  <p>
+  <li class="list-group-item">
     <strong>Maximum clean time:</strong>
     <%= room_master.maximum_clean_time %>
-  </p>
+  </li>
 
-  <p>
+  <li class="list-group-item">
+    <strong>Bed:</strong>
+    <%= room_master.bed %>
+  </li>
+
+  <li class="list-group-item">
     <strong>Block:</strong>
     <%= room_master.block %>
-  </p>
+  </li>
 
-  <p>
+  <li class="list-group-item">
     <strong>Floor:</strong>
     <%= room_master.floor %>
-  </p>
+  </li>
 
-  <p>
+  <li class="list-group-item">
     <strong>Key code:</strong>
     <%= room_master.key_code %>
-  </p>
+  </li>
 
-  <p>
-    <strong>Occupancy:</strong>
-    <%= room_master.occupancy %>
-  </p>
+  <li class="list-group-item">
+    <strong> Occupancy:</strong><%= room_master.occupancy %>
+  </li>
 
-  <p>
+  <li class="list-group-item">
     <strong>Roomtype:</strong>
-    <%= room_master.roomtype_id %>
-  </p>
+    <%= room_master.roomtype.name %>
+  </li>
 
 </div>
+</div>
+<br/>

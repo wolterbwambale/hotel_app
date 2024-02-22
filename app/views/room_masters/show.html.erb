@@ -1,10 +1,8 @@
-<p style="color: green"><%= notice %></p>
-
+<br/>
 <%= render @room_master %>
 
 <div>
-  <%= link_to "Edit this room master", edit_room_master_path(@room_master) %> |
-  <%= link_to "Back to room masters", room_masters_path %>
-
-  <%= button_to "Destroy this room master", @room_master,data:{comfirm:"Are you sure?"}, method: :delete %>
+  <%= link_to "Edit", edit_room_master_path(@room_master) , class:"btn btn-secondary"%> |
+  <%= link_to "Delete", @room_master, data: {confirm:"Are you sure?"}, method: :delete, class: "btn btn-outline-danger", id: "delete-room-master-btn" %>|
+   <%= link_to "Back", room_masters_path, class:"btn btn-dark" %>
 </div>
