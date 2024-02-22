@@ -25,3 +25,6 @@
 </div>
 <br>
 <%= link_to "Add New roomtype", new_roomtype_path, class:"btn btn-secondary" %>
+<%if @roomtype.present? %>
+ <%= render "form", roomtype: @roomtype %>
+<%end%>
