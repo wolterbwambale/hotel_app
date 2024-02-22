@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @room_master %>
+
+<div>
+  <%= link_to "Edit this room master", edit_room_master_path(@room_master) %> |
+  <%= link_to "Back to room masters", room_masters_path %>
+
+  <%= button_to "Destroy this room master", @room_master,data:{comfirm:"Are you sure?"}, method: :delete %>
+</div>

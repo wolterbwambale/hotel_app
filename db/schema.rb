@@ -10,9 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_21_074010) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_21_151914) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "room_masters", force: :cascade do |t|
+    t.integer "room_no"
+    t.string "room_type"
+    t.time "maximum_clean_time"
+    t.string "block"
+    t.integer "floor"
+    t.integer "key_code"
+    t.string "occupancy"
+    t.bigint "roomtype_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["roomtype_id"], name: "index_room_masters_on_roomtype_id"
+  end
 
   create_table "room_types", force: :cascade do |t|
     t.string "code"
@@ -34,4 +48,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_21_074010) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "room_masters", "roomtypes"
 end

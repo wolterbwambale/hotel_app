@@ -1,0 +1,31 @@
+<br/>
+<table class="table table-bordered table-striped table-hover table-sm">
+  <thead  class="thead-dark ">
+    <tr>
+      <th scope="col">Room No</th>
+      <th scope="col">Room type</th>
+      <th scope="col">Maximum clean time</th>
+      <th scope="col">Block</th>
+      <th scope="col">Floor</th>
+      <th scope="col">Key code</th>
+      <th>Occupancy</th>
+    </tr>
+  </thead>
+  <% @room_masters.each do |room_master| %>
+      <tr>
+        <td><%= link_to room_master.room_no,room_master %></td>
+        <td><%= room_master.room_type %></td>
+        <td><%= room_master.maximum_clean_time %></td>
+        <td><%= room_master.block %></td>
+        <td><%= room_master.floor %></td>
+        <td><%= room_master.key_code %></td>
+        <td><%= room_master.occupancy %></td>
+      </tr>
+
+  <% end %>
+</table>
+
+  <%= link_to "New room master", new_room_master_path, class:"btn btn-secondary" %>
+    
+</div>
+

@@ -1,7 +1,6 @@
 class RoomtypesController < ApplicationController
   before_action :set_roomtype, only: %i[ show edit update destroy ]
 
-  # GET /roomtypes or /roomtypes.json
   def index
     @roomtypes = Roomtype.all
   end
@@ -25,7 +24,7 @@ class RoomtypesController < ApplicationController
 
     respond_to do |format|
       if @roomtype.save
-        format.html { redirect_to roomtype_url(@roomtype), notice: "Roomtype was successfully created." }
+        format.html { redirect_to roomtypes_url(@roomtypes), notice: "Roomtype was successfully created." }
         format.json { render :show, status: :created, location: @roomtype }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +37,7 @@ class RoomtypesController < ApplicationController
   def update
     respond_to do |format|
       if @roomtype.update(roomtype_params)
-        format.html { redirect_to roomtype_url(@roomtype), notice: "Roomtype was successfully updated." }
+        format.html { redirect_to roomtypes_url(@roomtypes), notice: "Roomtype was successfully updated." }
         format.json { render :show, status: :ok, location: @roomtype }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +51,7 @@ class RoomtypesController < ApplicationController
     @roomtype.destroy!
 
     respond_to do |format|
-      format.html { redirect_to roomtypes_url, notice: "Roomtype was successfully destroyed." }
+      format.html { redirect_to roomtypes_url, notice: "Roomtype was successfully deleted." }
       format.json { head :no_content }
     end
   end
