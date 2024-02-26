@@ -48,7 +48,7 @@
     <%= form.label :occupancy, style: "display: block" %>
     <%= form.text_field :occupancy, class:"form-control form-control-sm col-sm-10" %>
   </div>
-
+ 
   <div class="form-group col-md-6">
   <%= form.label :roomtype_id, style: "display: block" %>
   <%= form.collection_select :roomtype_id, Roomtype.all, :id, :name, { prompt: "Select Room Type" },class:"form-control form-control-sm col-sm-10" %>

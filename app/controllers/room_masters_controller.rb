@@ -23,6 +23,7 @@ class RoomMastersController < ApplicationController
   def create
     @room_master = RoomMaster.new(room_master_params)
 
+
     respond_to do |format|
       if @room_master.save
         format.html { redirect_to room_master_url(@room_master), notice: "Room master was successfully created." }
