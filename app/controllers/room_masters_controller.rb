@@ -66,6 +66,6 @@ class RoomMastersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def room_master_params
-      params.require(:room_master).permit(:room_no, :maximum_clean_time, :bed, :block, :floor, :key_code, :occupancy, :roomtype_id, :roomfeature_id)
+      params.require(:room_master).permit(:room_no, :maximum_clean_time, :bed, :block, :floor, :key_code, :occupancy, :roomtype_id, :room_feature_id)
     end
 end

@@ -54,6 +54,11 @@
   <%= form.collection_select :roomtype_id, Roomtype.all, :id, :name, { prompt: "Select Room Type" },class:"form-control form-control-sm col-sm-10" %>
 </div>
 
+<div class="form-group col-md-6">
+  <%= form.label :room_feature_id, style: "display: block" %>
+  <%= form.collection_select :room_feature_id, RoomFeature.all, :id, :name, { prompt: "Select Room Type" },class:"form-control form-control-sm col-sm-10" %>
+</div>
+
   <br/>
   <div class="form-group col-md-6">
     <p><%= form.submit class:"btn btn-secondary"%>
