@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :nationalities
+  resources :regions
   resources :room_features
   resources :room_masters
   resources :roomtypes

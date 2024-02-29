@@ -1,0 +1,31 @@
+<br/><br/>
+<h1>Nationalities</h1>
+<table class="table table-bordered table-striped table-hover table-sm">
+ <thead  class="thead-dark ">
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Region</th>
+    </tr>
+  </thead>
+<div id="nationalities">
+
+  <% @nationalities.each do |nationality| %>
+  <tr>
+  <td>
+    <%= nationality.code %>
+  </td>
+  <td>
+  <%= link_to nationality.name, nationality%>
+  </td>
+  <td>
+  <%= nationality.region&.name%>
+  </td>
+   
+  <% end %>
+  </tr>
+</div>
+
+ 
+
+<%= link_to "New nationality", new_nationality_path %>
