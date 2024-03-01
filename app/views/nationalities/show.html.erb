@@ -1,10 +1,11 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @nationality %>
 
 <div>
-  <%= link_to "Edit this nationality", edit_nationality_path(@nationality) %> |
-  <%= link_to "Back to nationalities", nationalities_path %>
+<%=  nationalities_path %>
+</div>
 
-  <%= button_to "Destroy this nationality", @nationality, method: :delete %>
+<br/><br/>
+<div class="row">
+  <%= link_to "Edit", edit_nationality_path(@nationality), class:"btn btn-secondary" %> |
+  <%= link_to "Back", nationalities_path, class:"btn btn-dark"%>|
+  <%= button_to "Delete", @nationality, method: :delete, class:"btn btn-outline-danger sm" %>
 </div>
