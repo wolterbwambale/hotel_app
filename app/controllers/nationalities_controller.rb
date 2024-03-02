@@ -18,8 +18,7 @@ class NationalitiesController < ApplicationController
   # GET /nationalities/1/edit
   def edit
   end
-
-  # POST /nationalities or /nationalities.json
+  
   def create
     @nationality = Nationality.new(nationality_params)
 
@@ -34,7 +33,6 @@ class NationalitiesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /nationalities/1 or /nationalities/1.json
   def update
     respond_to do |format|
       if @nationality.update(nationality_params)

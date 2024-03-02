@@ -1,12 +1,10 @@
 class RegionsController < ApplicationController
   before_action :set_region, only: %i[ show edit update destroy ]
 
-  # GET /regions or /regions.json
   def index
     @regions = Region.all
   end
 
-  # GET /regions/1 or /regions/1.json
   def show
   end
 
