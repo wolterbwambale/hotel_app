@@ -14,12 +14,14 @@
       <th>Occupancy</th>
       <th>Room Status</th>
       <th>Room feature</th>
+      <th>Create Date</th>
+      <th>Last Update</th>
     </tr>
   </thead>
   <% @room_masters.each do |room_master| %>
       <tr>
         <td><%= link_to room_master.room_no,room_master %></td>
-        <td><%= room_master.maximum_clean_time %></td>
+        <td><%= room_master.maximum_clean_time.strftime('%H:%M:%S') %></td>
         <td><%= room_master.bed %></td>
         <td><%= room_master.block %></td>
         <td><%= room_master.floor %></td>
@@ -27,6 +29,8 @@
         <td><%= room_master.occupancy %></td>
         <td><%= room_master.roomtype.name %></td>
         <td><%= room_master.room_feature&.name %></td>
+        <td><%= room_master.created_at.strftime("%d-%m-%Y") %></td>
+         <td><%= room_master.updated_at.strftime("%d-%m-%Y") %></td>
       </tr>
 
   <% end %>
