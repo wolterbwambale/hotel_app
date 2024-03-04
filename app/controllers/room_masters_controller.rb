@@ -3,7 +3,7 @@ class RoomMastersController < ApplicationController
 
   # GET /room_masters or /room_masters.json
   def index
-    @room_masters = RoomMaster.all
+    @room_masters = RoomMaster.all.order(:room_no )
   end
 
   # GET /room_masters/1 or /room_masters/1.json
