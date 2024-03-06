@@ -7,12 +7,16 @@
     <tr>
       <th>Code</th>
       <th>Name</th>
+      <th>Created date</th>
+      <th>Last Update</th>
     </tr>
   </thead>
  <% @room_features.each do |room_feature| %>
       <tr>
         <td><%= link_to room_feature.code,room_feature %></td>
         <td><%= room_feature.name%></td>
+        <td><%= room_feature.created_at.strftime("%d-%m-%Y  %H:%M:%S")%></td>
+        <td><%= room_feature.updated_at.strftime("%d-%m-%Y  %H:%M:%S")%></td>
       </tr>
 
   <% end %>

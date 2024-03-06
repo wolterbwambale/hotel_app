@@ -5,6 +5,7 @@
       <th>Code</th>
       <th>Name</th>
       <th>Region</th>
+      <th>Created Date</th>
     </tr>
   </thead>
 <div id="nationalities">
@@ -19,6 +20,9 @@
   </td>
   <td>
   <%= nationality.region&.name%>
+  </td>
+  <td>
+  <%= nationality.created_at.strftime("%d-%b-%Y")%>
   </td>
    
   <% end %>
