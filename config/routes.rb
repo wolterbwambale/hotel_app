@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :mealplans
   resources :nationalities
   resources :regions
   resources :room_features
