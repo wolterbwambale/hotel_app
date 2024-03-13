@@ -1,15 +1,24 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Mealplans</h1>
-
-
-<div id="mealplans">
+<br/>
+<br/>
+<table class="table table-bordered table-striped table-hover table-sm">
+  <thead  class="thead-dark">
+    <tr>
+      <th scope="col">Code</th>
+      <th scope="col">Name</th>
+      <th scope="col">Effective Date</th>
+    </tr>
+  </thead>
+  <tr>
   <% @mealplans.each do |mealplan| %>
-    <%= render mealplan %>
-    <p>
-      <%= link_to "Show this mealplan", mealplan %>
-    </p>
+  <tr>
+    <td><%=mealplan.code%></td>
+    <td><%=mealplan.name%></td>
+    <td><%=mealplan.effective_date%></td>
+    </tr>
   <% end %>
 </div>
-
-<%= link_to "New mealplan", new_mealplan_path %>
+</div>
+</div>
+<div class="">
+<%= link_to "New mealplan", new_mealplan_path ,class:"btn btn-primary sm mb-2"%>
+</div>

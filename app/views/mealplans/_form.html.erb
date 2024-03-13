@@ -25,8 +25,10 @@
     <%= form.label :effective_date, style: "display: block" %>
     <%= form.date_field :effective_date, class:"form-control" %>
   </div>
-
+ <div class="row">
   <div class="form-group col-sm-6">
     <%= form.submit class:"btn btn-primary" %>
-  </div>
+  <%= link_to "Back", mealplans_path, class:"btn btn-dark" %>
+</div>
+</div>
 <% end %>
