@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div class="form-group col-sm-6">
+  <div class="form-group">
     <%= form.label :code, style: "display: block" %>
     <%= form.text_field :code, class:"form-control" %>
   </div>
 
-  <div class="form-group col-sm-6">
+  <div class="form-group">
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name, class:"form-control" %>
   </div>
 
-  <div class="form-group col-sm-6">
+  <div class="form-group ">
     <%= form.label :effective_date, style: "display: block" %>
     <%= form.date_field :effective_date, class:"form-control" %>
   </div>
- <div class="row">
-  <div class="form-group col-sm-6">
+ <div class="row col-sm-6">
+  <div class="form-group">
     <%= form.submit class:"btn btn-primary" %>
   <%= link_to "Back", mealplans_path, class:"btn btn-dark" %>
 </div>
