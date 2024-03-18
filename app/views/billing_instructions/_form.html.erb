@@ -1,0 +1,24 @@
+<%= form_with(model: billing_instruction) do |form| %>
+  <% if billing_instruction.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(billing_instruction.errors.count, "error") %> prohibited this billing_instruction from being saved:</h2>
+
+      <ul>
+        <% billing_instruction.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+

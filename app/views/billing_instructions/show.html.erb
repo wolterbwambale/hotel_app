@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @billing_instruction %>
+
+<div>
+  <%= link_to "Edit this billing instruction", edit_billing_instruction_path(@billing_instruction) %> |
+  <%= link_to "Back to billing instructions", billing_instructions_path %>
+
+  <%= button_to "Destroy this billing instruction", @billing_instruction, method: :delete %>
+</div>
