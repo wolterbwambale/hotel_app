@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Market executives</h1>
+
+<div id="market_executives">
+  <% @market_executives.each do |market_executive| %>
+    <%= render market_executive %>
+    <p>
+      <%= link_to "Show this market executive", market_executive %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New market executive", new_market_executive_path %>

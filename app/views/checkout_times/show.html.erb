@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @checkout_time %>
+
+<div>
+  <%= link_to "Edit this checkout time", edit_checkout_time_path(@checkout_time) %> |
+  <%= link_to "Back to checkout times", checkout_times_path %>
+
+  <%= button_to "Destroy this checkout time", @checkout_time, method: :delete %>
+</div>

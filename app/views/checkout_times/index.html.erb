@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Checkout times</h1>
+
+<div id="checkout_times">
+  <% @checkout_times.each do |checkout_time| %>
+    <%= render checkout_time %>
+    <p>
+      <%= link_to "Show this checkout time", checkout_time %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New checkout time", new_checkout_time_path %>

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :billing_instructions
+  resources :checkout_times
+  resources :market_executives
   resources :mealplans
   resources :nationalities
   resources :regions

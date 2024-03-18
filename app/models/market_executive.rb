@@ -1,0 +1,2 @@
+class MarketExecutive < ApplicationRecord
+end

@@ -1,28 +1,11 @@
 <br/><br/>
-<div class="card-header">
-<h1>Nationalities</h1>
-<table class="table table-bordered table-striped table-hover table-sm">
- <thead  class="thead-dark ">
-    <tr>
-      <th>Code</th>
-      <th>Name</th>
-      <th>Region</th>
-    </tr>
-  </thead>
-<div id="nationalities">
-
-  <tr>
-  <td>
-    <%= nationality.code %>
-  </td>
-  <td>
-  <%= link_to nationality.name, nationality%>
-  </td>
-  <td>
-  <%= nationality.region&.name%>
-  </td>
-   
-  </tr>
+<div class="card border-primary">
+<h4 class="card-header bg-primary text-white">Nationality</h4>
+<div class="card-body">
+  <p><strong>Country code:</strong>  <%= @nationality.code %> </p>
+  <p><strong>Country: </strong> <%= @nationality.name%></p>
+  <p><strong>Region: </strong><%= @nationality.region&.name%> </p>
+  
 </div>
 </div>
 

@@ -1,0 +1,27 @@
+<%= form_with(model: market_executive) do |form| %>
+  <% if market_executive.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(market_executive.errors.count, "error") %> prohibited this market_executive from being saved:</h2>
+
+      <ul>
+        <% market_executive.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :market_executive_code, style: "display: block" %>
+    <%= form.text_field :market_executive_code %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

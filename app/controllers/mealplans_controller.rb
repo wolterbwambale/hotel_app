@@ -52,7 +52,7 @@ class MealplansController < ApplicationController
     @mealplan.destroy!
 
     respond_to do |format|
-      format.html { redirect_to mealplans_url, notice: "Mealplan was successfully destroyed." }
+      format.html { redirect_to mealplans_url, notice: "Mealplan was successfully deleted." }
       format.json { head :no_content }
     end
   end

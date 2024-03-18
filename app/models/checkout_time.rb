@@ -1,0 +1,2 @@
+class CheckoutTime < ApplicationRecord
+end

@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  market_executive_code: MyString
+  name: MyString
+
+two:
+  market_executive_code: MyString
+  name: MyString
