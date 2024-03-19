@@ -1,14 +1,26 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Billing instructions</h1>
-
-<div id="billing_instructions">
-  <% @billing_instructions.each do |billing_instruction| %>
-    <%= render billing_instruction %>
-    <p>
-      <%= link_to "Show this billing instruction", billing_instruction %>
-    </p>
+<br/><br/>
+<h4 class="text-center">Billing instructions</h4>
+<div class="description">
+<table class="table table-bordered table-striped table-hover table-sm ">
+<thead  class="thead-dark">
+<tr>
+<th>Des_code</th>
+<th>Billing instruction</th>
+<th>Last Update</th>
+</tr>
+</thead>
+<tbody>
+<% @billing_instructions.each do |billing_instruction| %>
+<tr>
+  <td><%=billing_instruction.id %></td>
+  <td><%= link_to billing_instruction.description, billing_instruction %></td>
+  <td><%=billing_instruction.updated_at.strftime("%d/%B/%Y") %></td>
+    
   <% end %>
+  </tr>
+  </tbody>
 </div>
-
-<%= link_to "New billing instruction", new_billing_instruction_path %>
+<div class="py-3" >
+<%= link_to "Add New billing instruction", new_billing_instruction_path, class:"btn btn-primary" %>
+</div>
+</div>
